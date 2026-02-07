@@ -1,0 +1,38 @@
+.sectionHero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 126px;
+  background-color: #6425cb;
+  margin: 0 auto;
+  height: 967px;
+  padding-left: 140px;
+  padding-right: 140px;
+}
+.hero_main_inf {
+  width: 409px;
+}
+.hero_title {
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 117%;
+  color: #fff;
+}
+.hero_title_span {
+  color: #f4ab00;
+}
+.hero_parag {
+  font-weight: 400;
+  font-size: 18px;
+
+  line-height: 189%;
+  color: #fff;
+}
+.hero_btn {
+  border-radius: 32px;
+  width: 186px;
+  height: 52px;
+  background-color: #f4ab00;
+  border: none;
+  cursor: pointer;
+}
