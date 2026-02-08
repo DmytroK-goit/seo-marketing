@@ -1,13 +1,13 @@
 .sectionHero {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   gap: 126px;
   background-color: #6425cb;
   margin: 0 auto;
   height: 967px;
   padding-left: 140px;
   padding-right: 140px;
+  position: relative;
 }
 .hero_main_inf {
   width: 409px;
@@ -35,4 +35,51 @@
   background-color: #f4ab00;
   border: none;
   cursor: pointer;
+}
+.hero_img {
+  position: absolute;
+  left: 45%;
+}
+.hero_connection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero_main_block {
+  display: flex;
+}
+.hero_connection_social {
+  list-style: none;
+}
+.hero_connection_social {
+  display: flex;
+  gap: 15px;
+}
+.connection_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 187%;
+  color: #fff;
+}
+.hero_connection_phone_mail {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  list-style: none;
+}
+.connection_item a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+}
+.hero_connection_social li {
+  list-style: none;
+}
+.hero_connection {
+  padding: 0;
 }

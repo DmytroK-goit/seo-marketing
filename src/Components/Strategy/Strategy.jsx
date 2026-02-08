@@ -5,7 +5,7 @@ export const Strategy = () => {
   return (
     <div>
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
-      <p>Strategy</p>;
+      <p>Strategy</p>
     </div>
   );
 };
