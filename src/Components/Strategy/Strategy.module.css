@@ -1,0 +1,47 @@
+.strategy_section {
+  position: relative;
+}
+.strategy_first_block {
+  width: 1160px;
+  height: 518px;
+  border-radius: 10px;
+  box-shadow: 9px 9px 35px 0 rgba(56, 11, 113, 0.1);
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 80px 100px;
+}
+.strategy_list {
+  list-style: none;
+  width: 500px;
+}
+.strategy_first_block_main {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 500px;
+}
+.strategy_first_block_main :first-child {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 158%;
+  color: #f4ab00;
+}
+.strategy_first_block_main h2 {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 133%;
+  color: #2c1258;
+}
+.strategy_first_block_main :last-child {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 189%;
+  color: #604b83;
+}
