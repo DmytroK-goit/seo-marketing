@@ -20,12 +20,19 @@
 .strategy_list {
   list-style: none;
   width: 500px;
+  height: 318px;
+  display: flex;
+  gap: 70px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .strategy_first_block_main {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   width: 500px;
+  gap: 20px;
+  justify-content: space-between;
 }
 .strategy_first_block_main :first-child {
   font-weight: 400;
@@ -44,4 +51,33 @@
   font-size: 18px;
   line-height: 189%;
   color: #604b83;
+}
+.strategy_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.strategy_item h3 {
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 158%;
+  color: #2c1258;
+}
+.strategy_item p {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 187%;
+  color: #604b83;
+}
+.strategy_second_block {
+  width: 1160;
+  margin-top: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.strategy_sec_bl_frame {
+  display: flex;
 }

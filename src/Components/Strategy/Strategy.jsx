@@ -1,8 +1,11 @@
 import Image from "next/image";
 import FrameUnd from "../../img/frame_und.png";
+import FrameUp from "../../img/frame_up.png";
 import s from "./Strategy.module.css";
 import Mail from "../../img/strategy/mail.png";
 import Engine from "../../img/strategy/engine.png";
+import Pc from "../../img/strategy/pc.png";
+import SeoAgency from "../../img/strategy/seo_agency.png";
 export const Strategy = () => {
   return (
     <div className={s.strategy_section}>
@@ -21,23 +24,43 @@ export const Strategy = () => {
 
         <ul className={s.strategy_list}>
           <li className={s.strategy_item}>
-            <Image src={Mail} alt="Mail" width={24} height={24} />
+            <Image src={Mail} alt="Mail" width={86} height={86} />
             <div>
-              <h3>SEO Strategy</h3>
-              <p>Optimized content and structure for search engines</p>
+              <h3>Digital Marketing</h3>
+              <p>
+                It’s a modern business theme, that lets you build stunning high
+                performance websites using a fully visual interface.
+              </p>
             </div>
           </li>
 
           <li className={s.strategy_item}>
-            <Image src={Engine} alt="Engine" width={24} height={24} />
+            <Image src={Engine} alt="Engine" width={86} height={86} />
             <div>
-              <h3>Marketing Analysis</h3>
-              <p>Data-driven decisions for higher conversions</p>
+              <h3>Search Engine Optimization</h3>
+              <p>
+                It’s a modern business theme, that lets you build stunning high
+                performance websites using a fully visual interface.
+              </p>
             </div>
           </li>
         </ul>
       </div>
-      <div className={s.strategy_second_block}></div>
+      <div className={s.strategy_second_block}>
+        <div className={s.strategy_sec_bl_frame}>
+          <Image src={Pc} alt="Pc" width={550} height={560} />
+          <div>
+            <p>1</p>
+          </div>
+        </div>
+        <div className={s.strategy_sec_bl_frame}>
+          <Image src={SeoAgency} alt="SeoAgency" width={550} height={490} />
+          <div>
+            <p>2</p>
+          </div>
+        </div>
+      </div>
+      <Image src={FrameUp} alt="SEO marketing illustration" priority />
     </div>
   );
 };

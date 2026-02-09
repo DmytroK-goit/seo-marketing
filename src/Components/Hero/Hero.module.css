@@ -69,6 +69,7 @@
 .hero_connection_phone_mail {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 16px;
   list-style: none;
 }
@@ -81,5 +82,5 @@
   list-style: none;
 }
 .hero_connection {
-  padding: 0;
+  padding: 20px 0px;
 }
