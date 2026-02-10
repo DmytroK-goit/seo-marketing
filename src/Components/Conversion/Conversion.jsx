@@ -11,7 +11,7 @@ export const Conversion = () => {
     <div className={s.conversion_sec}>
       <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.conversion_block}>
-        <div>
+        <div className={s.conversion_block_first_ch}>
           <h3>Conversion rate optimization</h3>
           <p>
             Spyro is a powerful landing pages builder WordPress theme that lets
@@ -20,7 +20,7 @@ export const Conversion = () => {
           </p>
           <button type="button">Get a quote</button>
         </div>
-        <ul>
+        <ul className={s.conversion_block_sec_ch}>
           <li>
             <Image src={Ok} alt="Ok" width={50} />
             <h4>CRO Techniques</h4>
