@@ -127,7 +127,7 @@ export const Strategy = () => {
           </div>
         </div>
       </div>
-      <Image src={FrameUp} alt="SEO marketing illustration" priority />
+      {/* <Image src={FrameUp} alt="SEO marketing illustration" priority /> */}
     </div>
   );
 };

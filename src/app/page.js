@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Header } from "@/Components/Header/Header";
 import { Hero } from "@/Components/Hero/Hero";
 import { Strategy } from "@/Components/Strategy/Strategy";
+import { Conversion } from "@/Components/Conversion/Conversion";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <main>
         <Hero />
         <Strategy />
+        <Conversion />
       </main>
     </div>
   );
