@@ -72,6 +72,9 @@ export const OurService = () => {
               <p>White hat Backlink Generation</p>
             </li>
           </ul>
+          <button className={s.service_info_btn} type="button">
+            Explore Now
+          </button>
         </div>
         <Image src={Img} alt="Img" width={580} height={480} />
       </div>

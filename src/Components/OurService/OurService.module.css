@@ -54,3 +54,19 @@
   gap: 17px;
   align-items: center;
 }
+.service_info_btn {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138%;
+  text-align: center;
+  color: #fff;
+  width: 186px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  background-color: #f4ab00;
+  border: none;
+  cursor: pointer;
+}
