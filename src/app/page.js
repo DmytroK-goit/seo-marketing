@@ -4,6 +4,7 @@ import { Header } from "@/Components/Header/Header";
 import { Hero } from "@/Components/Hero/Hero";
 import { Strategy } from "@/Components/Strategy/Strategy";
 import { Conversion } from "@/Components/Conversion/Conversion";
+import { OurService } from "@/Components/OurService/OurService";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Hero />
         <Strategy />
         <Conversion />
+        <OurService />
       </main>
     </div>
   );

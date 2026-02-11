@@ -21,7 +21,7 @@ export const Conversion = () => {
           <button type="button">Get a quote</button>
         </div>
         <ul className={s.conversion_block_sec_ch}>
-          <li>
+          <li className={s.grid_item_one}>
             <Image src={Ok} alt="Ok" width={50} />
             <h4>CRO Techniques</h4>
             <p>
@@ -29,7 +29,7 @@ export const Conversion = () => {
               lets you build high converting pages.
             </p>
           </li>
-          <li>
+          <li className={s.grid_item_two}>
             <Image src={Task} alt="Task" width={50} />
             <h4>User Recordings</h4>
             <p>
@@ -37,7 +37,7 @@ export const Conversion = () => {
               Companies, and Individuals.
             </p>
           </li>
-          <li>
+          <li className={s.grid_item_three}>
             <Image src={Sort} alt="Sort" width={50} />
             <h4>A/B Split Testing</h4>
             <p>
@@ -45,7 +45,7 @@ export const Conversion = () => {
               use as your website.
             </p>
           </li>
-          <li>
+          <li className={s.grid_item_four}>
             <Image src={Web} alt="Web" width={50} />
             <h4>Better Website ROI</h4>
             <p>
@@ -55,7 +55,6 @@ export const Conversion = () => {
           </li>
         </ul>
       </div>
-
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
     </div>
   );
