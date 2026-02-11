@@ -92,14 +92,14 @@
   bottom: -15px;
 } */
 .grid_item_one {
-  transform: translateY(0px,-20px);
+  transform: translateY(-20px);
 }
 .grid_item_two {
-  transform: translateY(0px,20px);
+  transform: translateY(20px);
 }
 .grid_item_three {
-  transform: translateY(0px,-20px);
+  transform: translateY(-20px);
 }
 .grid_item_four {
-  transform: translateY(0px,20px);
+  transform: translateY(20px);
 }
