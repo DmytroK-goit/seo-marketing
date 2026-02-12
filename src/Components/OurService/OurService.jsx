@@ -13,69 +13,110 @@ import Voice from "../../img/service/voice.png";
 import Img from "../../img/service/img.png";
 import Done from "../../img/service/done.png";
 export const OurService = () => {
+  const services = [
+    {
+      title: "SEO & Marketing",
+      icon: Send,
+      description:
+        "Spyro WordPress theme is insanely flexible and amazingly easy to use.",
+      list: [
+        "Increase the Organic Traffic",
+        "On-Page Search Engine Optimization",
+        "White hat Backlink Generation",
+      ],
+    },
+    {
+      title: "Email Marketing",
+      icon: Email,
+      description: "Email marketing description here...",
+      list: ["Email Campaigns", "Automation", "Lead Nurturing"],
+    },
+    {
+      title: "Mobile Marketing",
+      icon: Mobile,
+      description: "Mobile marketing description here...",
+      list: ["App Promotion", "SMS Marketing", "Push Notifications"],
+    },
+    {
+      title: "Google Ads",
+      icon: Pc,
+      description:
+        "Drive instant traffic and high-quality leads with data-driven Google Ads campaigns. We optimize every click to maximize your ROI and scale your business efficiently.",
+      list: [
+        "Search & Display Campaign Setup",
+        "Conversion Tracking & Analytics",
+        "Continuous Performance Optimization",
+      ],
+    },
+    {
+      title: "Social Media Ads",
+      icon: Link,
+      description:
+        "Reach the right audience on Facebook, Instagram, and LinkedIn with targeted ad campaigns designed to increase engagement, brand awareness, and sales.",
+      list: [
+        "Audience Targeting & Retargeting",
+        "Creative Ad Design",
+        "Campaign Performance Monitoring",
+      ],
+    },
+    {
+      title: "Digital Marketing",
+      icon: Voice,
+      description:
+        "Build a strong online presence with a comprehensive digital marketing strategy tailored to your business goals and customer journey.",
+      list: [
+        "Multi-Channel Marketing Strategy",
+        "Content & Brand Development",
+        "Performance Analytics & Reporting",
+      ],
+    },
+  ];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className={s.service_sec}>
       <h2>Our Services</h2>
       <ul className={s.service_list}>
-        <li className={`${s.service_list_item} ${s.service_list_active}`}>
-          <Image src={Send} alt="Send" width={25} height={25} />
-          <p>SEO & Marketing</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
-        <li>
-          <Image src={Email} alt="Email" width={25} height={25} />
-          <p>Email Marketing</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
-        <li>
-          <Image src={Mobile} alt="Mobile" width={25} height={25} />
-          <p>Mobile Marketing</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
-        <li>
-          <Image src={Pc} alt="Google Ads" width={25} height={25} />
-          <p>Google Ads</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
-        <li>
-          <Image src={Link} alt="Social Media Ads" width={25} height={25} />
-          <p>Social Media Ads</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
-        <li>
-          <Image src={Voice} alt="Digital Marketing" width={25} height={25} />
-          <p>Digital Marketing</p>
-          <Image src={Rect} alt="Rectangle" width={25} />
-        </li>
+        {services.map((service, index) => (
+          <li
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`${s.service_list_item} ${
+              activeIndex === index ? s.service_list_active : ""
+            }`}
+          >
+            <Image
+              src={service.icon}
+              alt={service.title}
+              width={25}
+              height={25}
+            />
+            <p>{service.title}</p>
+            <Image src={Rect} alt="Rectangle" width={25} />
+          </li>
+        ))}
       </ul>
-
       <div className={s.service_info}>
         <div className={s.service_info_first}>
-          <h3>SEO & Marketing</h3>
-          <p>
-            Spyro WordPress theme is insanely flexible and amazingly easy to
-            use. This alone would be enough for a 5 star rating on top of a
-            great tool is even better customer support.
-          </p>
-          <ul>
-            <li>
-              <Image src={Done} alt="Done" width={15} />
-              <p>Increase the Organic Traffic</p>
-            </li>
-            <li>
-              <Image src={Done} alt="Done" width={15} />
-              <p>On-Page Search Engine Optimization</p>
-            </li>
-            <li>
-              <Image src={Done} alt="Done" width={15} />
-              <p>White hat Backlink Generation</p>
-            </li>
+          <h3>{services[activeIndex].title}</h3>
+          <p>{services[activeIndex].description}</p>
+
+          <ul className={s.service_desc_list}>
+            {services[activeIndex].list.map((item, i) => (
+              <li key={i}>
+                <Image src={Done} alt="Done" width={15} />
+                <p>{item}</p>
+              </li>
+            ))}
           </ul>
-          <button className={s.service_info_btn} type="button">
+          <button
+            onClick={() => alert("This feature is currently in development")}
+            className={s.service_desc_list_btn}
+            type="button"
+          >
             Explore Now
           </button>
         </div>
+
         <Image src={Img} alt="Img" width={580} height={480} />
       </div>
     </div>

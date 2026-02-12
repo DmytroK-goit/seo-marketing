@@ -39,6 +39,7 @@
 .service_list_active {
   box-shadow: 0 20px 60px 0 rgba(0, 0, 0, 0.05);
   background-color: #f4ab00;
+  border-radius: 4px;
 }
 .service_info {
   display: flex;
@@ -48,6 +49,8 @@
 .service_info_first {
   display: flex;
   flex-direction: column;
+  width: 580px;
+  height: 481px;
 }
 .service_info_first li {
   display: flex;
@@ -67,6 +70,51 @@
   justify-content: center;
   border-radius: 32px;
   background-color: #f4ab00;
+  border: none;
+  cursor: pointer;
+}
+.service_info_first h3 {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 159%;
+  color: #2c1258;
+  margin-top: 50px;
+}
+.service_info_first p {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 189%;
+  color: #604b83;
+}
+.service_list_item {
+  cursor: pointer;
+}
+.service_desc_list {
+  margin-top: 20px;
+  display: flex;
+  gap: 17px;
+  flex-direction: column;
+}
+.service_desc_list li {
+  display: flex;
+  gap: 17px;
+  align-items: center;
+}
+.service_desc_list p {
+  margin: 0;
+}
+.service_desc_list_btn {
+  margin-top: 30px;
+  width: 186px;
+  height: 52px;
+  border-radius: 32px;
+  background-color: #f4ab00;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 138%;
+  text-align: center;
+  color: #fff;
   border: none;
   cursor: pointer;
 }
