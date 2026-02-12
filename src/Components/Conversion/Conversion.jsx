@@ -1,5 +1,5 @@
 import s from "./Conversion.module.css";
-import FrameUnd from "../../img/frame_und.png";
+
 import FrameUp from "../../img/frame_up.png";
 import Image from "next/image";
 import Ok from "../../img/Conversation/Ok.png";
@@ -55,7 +55,6 @@ export const Conversion = () => {
           </li>
         </ul>
       </div>
-      <Image src={FrameUnd} alt="SEO marketing illustration" priority />
     </div>
   );
 };

@@ -12,6 +12,7 @@ import Link from "../../img/service/link.png";
 import Voice from "../../img/service/voice.png";
 import Img from "../../img/service/img.png";
 import Done from "../../img/service/done.png";
+import FrameUnd from "../../img/frame_und.png";
 export const OurService = () => {
   const services = [
     {
@@ -73,51 +74,54 @@ export const OurService = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className={s.service_sec}>
-      <h2>Our Services</h2>
-      <ul className={s.service_list}>
-        {services.map((service, index) => (
-          <li
-            key={index}
-            onClick={() => setActiveIndex(index)}
-            className={`${s.service_list_item} ${
-              activeIndex === index ? s.service_list_active : ""
-            }`}
-          >
-            <Image
-              src={service.icon}
-              alt={service.title}
-              width={25}
-              height={25}
-            />
-            <p>{service.title}</p>
-            <Image src={Rect} alt="Rectangle" width={25} />
-          </li>
-        ))}
-      </ul>
-      <div className={s.service_info}>
-        <div className={s.service_info_first}>
-          <h3>{services[activeIndex].title}</h3>
-          <p>{services[activeIndex].description}</p>
+    <div>
+      <Image src={FrameUnd} alt="SEO marketing illustration" priority />
+      <div className={s.service_sec}>
+        <h2>Our Services</h2>
+        <ul className={s.service_list}>
+          {services.map((service, index) => (
+            <li
+              key={index}
+              onClick={() => setActiveIndex(index)}
+              className={`${s.service_list_item} ${
+                activeIndex === index ? s.service_list_active : ""
+              }`}
+            >
+              <Image
+                src={service.icon}
+                alt={service.title}
+                width={25}
+                height={25}
+              />
+              <p>{service.title}</p>
+              <Image src={Rect} alt="Rectangle" width={25} />
+            </li>
+          ))}
+        </ul>
+        <div className={s.service_info}>
+          <div className={s.service_info_first}>
+            <h3>{services[activeIndex].title}</h3>
+            <p>{services[activeIndex].description}</p>
 
-          <ul className={s.service_desc_list}>
-            {services[activeIndex].list.map((item, i) => (
-              <li key={i}>
-                <Image src={Done} alt="Done" width={15} />
-                <p>{item}</p>
-              </li>
-            ))}
-          </ul>
-          <button
-            onClick={() => alert("This feature is currently in development")}
-            className={s.service_desc_list_btn}
-            type="button"
-          >
-            Explore Now
-          </button>
+            <ul className={s.service_desc_list}>
+              {services[activeIndex].list.map((item, i) => (
+                <li key={i}>
+                  <Image src={Done} alt="Done" width={15} />
+                  <p>{item}</p>
+                </li>
+              ))}
+            </ul>
+            <button
+              onClick={() => alert("This feature is currently in development")}
+              className={s.service_desc_list_btn}
+              type="button"
+            >
+              Explore Now
+            </button>
+          </div>
+
+          <Image src={Img} alt="Img" width={580} height={480} />
         </div>
-
-        <Image src={Img} alt="Img" width={580} height={480} />
       </div>
     </div>
   );
