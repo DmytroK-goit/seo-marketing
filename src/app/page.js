@@ -7,6 +7,7 @@ import { Conversion } from "@/Components/Conversion/Conversion";
 import { OurService } from "@/Components/OurService/OurService";
 import { HowWork } from "@/Components/HowWork/HowWork";
 import { Team } from "@/Components/Team/Team";
+import { Price } from "@/Components/Price/Price";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <OurService />
         <HowWork />
         <Team />
+        <Price />
       </main>
     </div>
   );

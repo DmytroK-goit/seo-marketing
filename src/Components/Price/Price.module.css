@@ -1,0 +1,37 @@
+.price_sec {
+  height: 1053px;
+  background-color: #6425cb;
+}
+.price_block {
+  width: 1160px;
+  height: 710px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.price_block h2 {
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 147%;
+  color: #fff;
+  text-align: center;
+}
+.price_block_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 189%;
+  color: #fff;
+  margin-top: 14px;
+  text-align: center;
+}
+.price_list {
+  display: flex;
+}
+.price_card {
+  border-radius: 15px;
+  width: 360px;
+  height: 710px;
+  box-shadow: 0 15px 30px 0 rgba(255, 255, 255, 0.04);
+  background: #fff;
+}

@@ -7,6 +7,7 @@ import Prince from "../../img/team/prince.png";
 import Jones from "../../img/team/jones.png";
 import Evans from "../../img/team/evans.png";
 import FrameUnd from "../../img/frame_und.png";
+import FrameUp from "../../img/frame_up.png";
 export const Team = () => {
   const team = [
     {
@@ -58,6 +59,7 @@ export const Team = () => {
           ))}
         </ul>
       </div>
+      <Image src={FrameUp} alt="SEO marketing illustration" priority />
     </>
   );
 };
