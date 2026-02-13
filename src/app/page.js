@@ -6,6 +6,7 @@ import { Strategy } from "@/Components/Strategy/Strategy";
 import { Conversion } from "@/Components/Conversion/Conversion";
 import { OurService } from "@/Components/OurService/OurService";
 import { HowWork } from "@/Components/HowWork/HowWork";
+import { Team } from "@/Components/Team/Team";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Conversion />
         <OurService />
         <HowWork />
+        <Team />
       </main>
     </div>
   );

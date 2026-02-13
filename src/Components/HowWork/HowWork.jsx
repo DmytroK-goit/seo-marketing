@@ -1,5 +1,5 @@
 import s from "./HowWork.module.css";
-import FrameUnd from "../../img/frame_und.png";
+
 import FrameUp from "../../img/frame_up.png";
 import Image from "next/image";
 import Analysis from "../../img/howwork/Analysis.png";
@@ -58,7 +58,6 @@ export const HowWork = () => {
           </ul>
         </div>
       </div>
-      <Image src={FrameUnd} alt="SEO marketing illustration" priority />
     </div>
   );
 };

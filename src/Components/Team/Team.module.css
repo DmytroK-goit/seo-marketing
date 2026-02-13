@@ -1,0 +1,42 @@
+.team_sec {
+  width: 1094px;
+  height: 452px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.team_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 60px;
+}
+.team_list li {
+  width: 331px;
+  height: 86px;
+  display: flex;
+  gap: 24px;
+}
+.team_list_info {
+  display: flex;
+  flex-direction: column;
+}
+.team_sec h2 {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 133%;
+  text-align: center;
+  color: #2c1258;
+}
+.team_sec_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 189%;
+  text-align: center;
+  color: #604b83;
+  margin-top: 11px;
+}
