@@ -9,6 +9,7 @@ import { HowWork } from "@/Components/HowWork/HowWork";
 import { Team } from "@/Components/Team/Team";
 import { Price } from "@/Components/Price/Price";
 import { FidBack } from "@/Components/FidBack/FidBack";
+import { News } from "@/Components/News/News";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Team />
         <Price />
         <FidBack />
+        <News />
       </main>
     </div>
   );

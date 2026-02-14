@@ -2,9 +2,10 @@
 
 import s from "./FidBack.module.scss";
 import FrameUnd from "../../img/frame_und.png";
+import FrameUpSec from "../../img/frame_up_sec.png";
 import Lauren from "../../img/fidback/LaurenNunnally.png";
+import Tools from "../../img/fidback/tools.png";
 import Image from "next/image";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 
@@ -71,6 +72,14 @@ export const FidBack = () => {
           ))}
         </Swiper>
       </div>
+      <Image
+        className={s.feedback_block_tools}
+        src={Tools}
+        alt="tools"
+        width={1160}
+        height={150}
+      />
+      <Image src={FrameUpSec} alt="SEO marketing illustration" priority />
     </div>
   );
 };
