@@ -4,12 +4,14 @@ import s from "./Price.module.scss";
 import TrueIco from "../../img/price/true.png";
 import FalseIco from "../../img/price/false.png";
 import FrameUp from "../../img/frame_up.png";
+import Popular from "../../img/price/popular.png";
 import { useState } from "react";
 export const Price = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const pricing = [
     {
       planeName: "Silver",
+      popular: false,
       price: "159",
       keyWords: true,
       topTen: true,
@@ -22,6 +24,7 @@ export const Price = () => {
     },
     {
       planeName: "Gold",
+      popular: true,
       price: "399",
       keyWords: true,
       topTen: true,
@@ -34,6 +37,7 @@ export const Price = () => {
     },
     {
       planeName: "Platinum",
+      popular: false,
       price: "549",
       keyWords: true,
       topTen: true,
@@ -67,6 +71,14 @@ export const Price = () => {
         <ul className={s.price_list}>
           {pricing.map((p, index) => (
             <li key={index} className={s.price_card}>
+              {p.popular && (
+                <Image
+                  src={Popular}
+                  alt="Most Popular"
+                  className={s.popular_badge}
+                />
+              )}
+
               <h3>{p.planeName}</h3>
 
               <p>
@@ -74,7 +86,7 @@ export const Price = () => {
               </p>
 
               <ul className={s.feature_list}>
-                {features.map((feature) => (
+                {features.map((feature, index) => (
                   <li key={index}>
                     <Image
                       src={p[feature.key] ? TrueIco : FalseIco}
@@ -93,7 +105,7 @@ export const Price = () => {
                   selectedPlan === p.planeName ? s.active_plan : ""
                 }`}
               >
-                {selectedPlan === p.planeName ? "Selected" : "Choose Plan"}
+                {selectedPlan === p.planeName ? "Selected" : "Get Started"}
               </button>
             </li>
           ))}

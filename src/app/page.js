@@ -8,6 +8,7 @@ import { OurService } from "@/Components/OurService/OurService";
 import { HowWork } from "@/Components/HowWork/HowWork";
 import { Team } from "@/Components/Team/Team";
 import { Price } from "@/Components/Price/Price";
+import { FidBack } from "@/Components/FidBack/FidBack";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
         <HowWork />
         <Team />
         <Price />
+        <FidBack />
       </main>
     </div>
   );

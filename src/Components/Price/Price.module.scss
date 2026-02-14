@@ -3,14 +3,14 @@
 }
 .price_block {
   width: 1160px;
-  /* height: 710px; */
+
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
   margin-top: 70px;
-  margin-bottom: 110px;
+  // margin-bottom: 110px;
 }
 .price_block h2 {
   font-weight: 400;
@@ -39,7 +39,9 @@
   height: 710px;
   box-shadow: 0 15px 30px 0 rgba(255, 255, 255, 0.04);
   background: #fff;
-  padding: 40px 30px 50px 30px;
+  padding: 40px 30px 0px 30px;
+  position: relative;
+  margin-bottom: 110px;
 }
 .price_card {
   h3 {
@@ -69,6 +71,9 @@
 }
 .feature_list {
   margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 .feature_list li {
   height: 48px;
@@ -84,8 +89,13 @@
   border-radius: 32px;
   border: none;
   margin: 0 auto;
+  margin-bottom: 50px;
 }
 .active_plan {
   transition: 0.3s ease;
   background-color: #f4ab00;
+}
+.popular_badge {
+  position: absolute;
+  left: 0px;
 }
