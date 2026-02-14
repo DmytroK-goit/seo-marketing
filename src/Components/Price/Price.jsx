@@ -1,9 +1,12 @@
+"use client";
 import Image from "next/image";
-import s from "./Price.module.css";
+import s from "./Price.module.scss";
 import TrueIco from "../../img/price/true.png";
 import FalseIco from "../../img/price/false.png";
-
+import FrameUp from "../../img/frame_up.png";
+import { useState } from "react";
 export const Price = () => {
+  const [selectedPlan, setSelectedPlan] = useState(null);
   const pricing = [
     {
       planeName: "Silver",
@@ -56,6 +59,7 @@ export const Price = () => {
 
   return (
     <div className={s.price_sec}>
+      <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.price_block}>
         <h2>Pricing & Plans</h2>
         <p className={s.price_block_p}>We offer best price in the market</p>
@@ -71,7 +75,7 @@ export const Price = () => {
 
               <ul className={s.feature_list}>
                 {features.map((feature) => (
-                  <li key={feature.key}>
+                  <li key={index}>
                     <Image
                       src={p[feature.key] ? TrueIco : FalseIco}
                       alt="feature icon"
@@ -83,7 +87,14 @@ export const Price = () => {
                 ))}
               </ul>
 
-              <button className={s.price_btn}>Choose Plan</button>
+              <button
+                onClick={() => setSelectedPlan(p.planeName)}
+                className={`${s.price_btn} ${
+                  selectedPlan === p.planeName ? s.active_plan : ""
+                }`}
+              >
+                {selectedPlan === p.planeName ? "Selected" : "Choose Plan"}
+              </button>
             </li>
           ))}
         </ul>

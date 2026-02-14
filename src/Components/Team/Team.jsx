@@ -59,7 +59,7 @@ export const Team = () => {
           ))}
         </ul>
       </div>
-      <Image src={FrameUp} alt="SEO marketing illustration" priority />
+      {/* <Image src={FrameUp} alt="SEO marketing illustration" priority /> */}
     </>
   );
 };
