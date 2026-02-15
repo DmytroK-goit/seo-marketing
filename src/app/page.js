@@ -11,7 +11,8 @@ import { Price } from "@/Components/Price/Price";
 import { FidBack } from "@/Components/FidBack/FidBack";
 import { News } from "@/Components/News/News";
 import { GetTouch } from "@/Components/GetTouch/GetTouch";
-import { Form } from "@/Components/Form/Form";
+import { FormSec } from "@/Components/Form/FormSec";
+import { Footer } from "@/Components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -29,7 +30,8 @@ export default function Home() {
         <FidBack />
         <News />
         <GetTouch />
-        <Form />
+        <FormSec />
+        <Footer />
       </main>
     </div>
   );
