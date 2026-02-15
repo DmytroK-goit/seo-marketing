@@ -10,6 +10,8 @@ import { Team } from "@/Components/Team/Team";
 import { Price } from "@/Components/Price/Price";
 import { FidBack } from "@/Components/FidBack/FidBack";
 import { News } from "@/Components/News/News";
+import { GetTouch } from "@/Components/GetTouch/GetTouch";
+import { Form } from "@/Components/Form/Form";
 
 export default function Home() {
   return (
@@ -26,6 +28,8 @@ export default function Home() {
         <Price />
         <FidBack />
         <News />
+        <GetTouch />
+        <Form />
       </main>
     </div>
   );
