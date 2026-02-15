@@ -8,29 +8,29 @@ import Email from "../../img/form/email.png";
 import Man from "../../img/form/man.png";
 import { Field, Formik, Form } from "formik";
 export const FormSec = () => {
-   const handleSubmit = async (values, { resetForm }) => {
-     try {
-       const res = await fetch("/api/contact", {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify(values),
-       });
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
 
-       if (res.ok) {
-         alert("Message sent successfully!");
-         resetForm();
-       } else {
-         alert("Error sending message");
-       }
-     } catch (error) {
-       console.error(error);
-       alert("Server error");
-     }
-   };
+      if (res.ok) {
+        alert("Message sent successfully!");
+        resetForm();
+      } else {
+        alert("Error sending message");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Server error");
+    }
+  };
   return (
-    <div className={s.form_sec}>
+    <div id="contact" className={s.form_sec}>
       <Image src={FrameUndSec} alt="SEO marketing illustration" priority />
       <ul className={s.form_sec_list}>
         <li>

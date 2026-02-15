@@ -5,7 +5,7 @@ import Class from "../../img/news/class.png";
 import Image from "next/image";
 export const News = () => {
   return (
-    <div className={s.news_sec}>
+    <div id="blog" className={s.news_sec}>
       <div className={s.news_block}>
         <h2>News & Case Studies</h2>
         <p className={s.news_block_p}>

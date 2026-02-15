@@ -62,7 +62,7 @@ export const Price = () => {
   ];
 
   return (
-    <div className={s.price_sec}>
+    <div id="price" className={s.price_sec}>
       <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.price_block}>
         <h2>Pricing & Plans</h2>

@@ -74,7 +74,7 @@ export const OurService = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div>
+    <div id="services">
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.service_sec}>
         <h2>Our Services</h2>

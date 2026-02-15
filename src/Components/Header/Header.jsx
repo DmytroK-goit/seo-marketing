@@ -11,25 +11,25 @@ export const Header = () => {
       <nav>
         <ul className={s.header_nav}>
           <li>
-            <Link href="">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="">Why SEO?</Link>
+            <Link href="#whySEO">Why SEO?</Link>
           </li>
           <li>
-            <Link href="">Services</Link>
+            <Link href="#services">Services</Link>
           </li>
           <li>
-            <Link href="">Team</Link>
+            <Link href="#team">Team</Link>
           </li>
           <li>
-            <Link href="">Pricing</Link>
+            <Link href="#price">Pricing</Link>
           </li>
           <li>
-            <Link href="">Blog</Link>
+            <Link href="#blog">Blog</Link>
           </li>
           <li>
-            <Link href="">Contact</Link>
+            <Link href="#contact">Contact</Link>
           </li>
         </ul>
       </nav>

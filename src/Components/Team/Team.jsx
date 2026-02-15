@@ -42,7 +42,7 @@ export const Team = () => {
     },
   ];
   return (
-    <>
+    <div id="team">
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.team_sec}>
         <h2>Marketing Team</h2>
@@ -60,6 +60,6 @@ export const Team = () => {
         </ul>
       </div>
       {/* <Image src={FrameUp} alt="SEO marketing illustration" priority /> */}
-    </>
+    </div>
   );
 };

@@ -11,7 +11,7 @@ import Cloud from "../../img/strategy/Cloud.png";
 import People from "../../img/strategy/People.png";
 export const Strategy = () => {
   return (
-    <div className={s.strategy_section}>
+    <div id="whySEO" className={s.strategy_section}>
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.strategy_first_block}>
         <div className={s.strategy_first_block_main}>
