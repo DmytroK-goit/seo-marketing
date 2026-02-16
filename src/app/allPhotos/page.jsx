@@ -1,27 +1,10 @@
-"use client";
+import AllPhotos from "@/Components/allPhotos/allPhotos";
+import { Suspense } from "react";
 
-import { useSearchParams } from "next/navigation";
-import Image from "next/image";
-import s from "./allPhotos.module.scss";
-
-export default function AllPhotosPage() {
-  const params = useSearchParams();
-  const data = params.get("data");
-
-  const posts = data ? JSON.parse(data) : [];
-
+export default function Page() {
   return (
-    <div className={s.photos_page}>
-      <h2>All Posts</h2>
-
-      <ul className={s.photos_block}>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <Image src={post.image} alt={post.title} width={320} />
-            <p>{post.title}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <Suspense fallback={<div>Loading photos...</div>}>
+      <AllPhotos />
+    </Suspense>
   );
 }

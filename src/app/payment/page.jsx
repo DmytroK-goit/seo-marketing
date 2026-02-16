@@ -1,32 +1,11 @@
-"use client";
 
-import s from "./payment.module.scss";
-import { useSearchParams } from "next/navigation";
+import PaymentPage from "@/Components/PaymentPage/PaymentPage";
+import { Suspense } from "react";
 
-export default function PaymentPage() {
-  const params = useSearchParams();
-  const plan = params.get("plan");
-  const price = params.get("price");
-
+export default function Page() {
   return (
-    <div className={s.payment_page}>
-      <div className={s.card}>
-        <h2>Checkout</h2>
-
-        <div className={s.plan_block}>
-          <h3>{plan} Plan</h3>
-          <p className={s.desc}>
-            You selected the <b>{plan}</b> subscription.
-          </p>
-          <p className={s.desc}>
-            Price <b>{price}</b>
-          </p>
-        </div>
-
-        <button className={s.pay_btn}>Continue to payment</button>
-
-        <p className={s.secure}>🔒 Secure payment • Cancel anytime</p>
-      </div>
-    </div>
+    <Suspense fallback={<div>Loading photos...</div>}>
+      <PaymentPage/>
+    </Suspense>
   );
 }
