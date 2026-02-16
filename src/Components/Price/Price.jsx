@@ -6,8 +6,10 @@ import FalseIco from "../../img/price/false.png";
 import FrameUp from "../../img/frame_up.png";
 import Popular from "../../img/price/popular.png";
 import { useState } from "react";
+import Link from "next/link";
 export const Price = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
+
   const pricing = [
     {
       planeName: "Silver",
@@ -100,16 +102,28 @@ export const Price = () => {
               </ul>
 
               <button
-                onClick={() => setSelectedPlan(p.planeName)}
+                onClick={() => setSelectedPlan(p)}
                 className={`${s.price_btn} ${
-                  selectedPlan === p.planeName ? s.active_plan : ""
+                  selectedPlan?.planeName === p.planeName ? s.active_plan : ""
                 }`}
               >
-                {selectedPlan === p.planeName ? "Selected" : "Get Started"}
+                {selectedPlan?.planeName === p.planeName
+                  ? "Selected"
+                  : "Get Started"}
               </button>
             </li>
           ))}
         </ul>
+        <Link
+          href={
+            selectedPlan
+              ? `/payment?plan=${selectedPlan.planeName}&price=${selectedPlan.price}`
+              : "#"
+          }
+          className={`${!selectedPlan ? s.disabled : ""} ${s.payment_btn}`}
+        >
+          Pay your plan
+        </Link>
       </div>
     </div>
   );

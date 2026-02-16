@@ -3,6 +3,28 @@ import Book from "../../img/news/book.png";
 import Mount from "../../img/news/mount.png";
 import Class from "../../img/news/class.png";
 import Image from "next/image";
+import Link from "next/link";
+
+export const newsData = [
+  {
+    id: 1,
+    image: Book,
+    categories: ["Reviews"],
+    title: "The Art and Science behind Typography",
+  },
+  {
+    id: 2,
+    image: Mount,
+    categories: ["News", "Reviews", "Technology"],
+    title: "When hobby, passion and profession one and the same",
+  },
+  {
+    id: 3,
+    image: Class,
+    categories: ["Reviews", "Top Picks"],
+    title: "5 tips to keep your customers happy By Spyro December 22, 2018",
+  },
+];
 export const News = () => {
   return (
     <div id="blog" className={s.news_sec}>
@@ -11,37 +33,37 @@ export const News = () => {
         <p className={s.news_block_p}>
           We specialize in a wide array of marketing fields
         </p>
+
         <ul className={s.news_block_list}>
-          <li>
-            <Image src={Book} alt="Book" width={376} height={288} />
-            <ul className={s.news_block_list_child}>
-              <li>Reviews</li>
-            </ul>
-            <p>The Art and Science behind Typography</p>
-          </li>
-          <li>
-            <Image src={Mount} alt="Mount" width={376} height={288} />
-            <ul className={s.news_block_list_child}>
-              <li>News</li>
-              <li>Reviews</li>
-              <li>Technology</li>
-            </ul>
-            <p>When hobby, passion and profession one and the same</p>
-          </li>
-          <li>
-            <Image src={Class} alt="Class" width={376} height={288} />
-            <ul className={s.news_block_list_child}>
-              <li>Reviews</li>
-              <li>Top Picks</li>
-            </ul>
-            <p>
-              5 tips to keep your customers happy By Spyro December 22, 2018
-            </p>
-          </li>
+          {newsData.map((item) => (
+            <li key={item.id}>
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={376}
+                height={288}
+              />
+
+              <ul className={s.news_block_list_child}>
+                {item.categories.map((cat, i) => (
+                  <li key={i}>{cat}</li>
+                ))}
+              </ul>
+
+              <p>{item.title}</p>
+            </li>
+          ))}
         </ul>
-        <button className={s.news_block_btn} type="button">
+
+        <Link
+          href={{
+            pathname: "/allPhotos",
+            query: { data: JSON.stringify(newsData) },
+          }}
+          className={s.news_block_btn}
+        >
           See all posts
-        </button>
+        </Link>
       </div>
     </div>
   );

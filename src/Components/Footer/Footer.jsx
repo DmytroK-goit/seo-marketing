@@ -101,7 +101,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className={s.footer_sec_block}>
-        <p>© SEOFlow 2021. All Rights Reserved.</p>
+        <p>© SEOFlow 2026. All Rights Reserved.</p>
 
         <p>Changelog</p>
         <Link href="/license">License Info</Link>

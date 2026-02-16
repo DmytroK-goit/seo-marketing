@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className={styles.section}>
       {" "}
-      <Header />
+      {/* <Header /> */}
       <main>
         <Hero />
         <Strategy />
@@ -31,7 +31,7 @@ export default function Home() {
         <News />
         <GetTouch />
         <FormSec />
-        <Footer />
+        {/* <Footer /> */}
       </main>
     </div>
   );

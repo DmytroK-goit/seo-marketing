@@ -1,6 +1,8 @@
 import { Nunito } from "next/font/google";
 import "normalize.css";
 import "./globals.css";
+import { Header } from "@/Components/Header/Header";
+import { Footer } from "@/Components/Footer/Footer";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -12,7 +14,11 @@ const nunito = Nunito({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={nunito.variable}>
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
