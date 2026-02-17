@@ -1,14 +1,21 @@
+"use client";
 import s from "./HowWork.module.css";
-
 import FrameUp from "../../img/frame_up.png";
 import Image from "next/image";
 import Analysis from "../../img/howwork/Analysis.png";
 import Keyword from "../../img/howwork/Keyword.png";
 import Optimization from "../../img/howwork/Optimization.png";
 import Line from "../../img/howwork/line.png";
+import { motion } from "framer-motion";
 export const HowWork = () => {
   return (
-    <div className={s.howwork_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className={s.howwork_sec}
+    >
       <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.howwork_sec_maininfo}>
         <h2>
@@ -58,6 +65,6 @@ export const HowWork = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

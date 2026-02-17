@@ -2,6 +2,7 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import s from "./allPhotos.module.scss";
+import { motion } from "framer-motion";
 
 export default function AllPhotos() {
   const params = useSearchParams();
@@ -10,7 +11,13 @@ export default function AllPhotos() {
   const posts = data ? JSON.parse(data) : [];
 
   return (
-    <div className={s.photos_page}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className={s.photos_page}
+    >
       <h2>All Posts</h2>
 
       <ul className={s.photos_block}>
@@ -21,6 +28,6 @@ export default function AllPhotos() {
           </li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 }

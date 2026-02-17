@@ -1,10 +1,18 @@
+"use client";
 import s from "./Header.module.css";
 import HeadIco from "../../img/HeadIco.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export const Header = () => {
   return (
-    <header className={s.header_section}>
+    <motion.header
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 3.2 }}
+      viewport={{ once: true }}
+      className={s.header_section}
+    >
       <Link href="/">
         <Image src={HeadIco} width={90} height={17} alt="Seo image" />
       </Link>
@@ -36,6 +44,6 @@ export const Header = () => {
       <button className={s.header_btn} type="button">
         Enquiry
       </button>
-    </header>
+    </motion.header>
   );
 };

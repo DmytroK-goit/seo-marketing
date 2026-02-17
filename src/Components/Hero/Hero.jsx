@@ -1,3 +1,4 @@
+"use client";
 import s from "./Hero.module.css";
 import HeroImg from "../../img/hero/heroimg.png";
 import Image from "next/image";
@@ -8,9 +9,16 @@ import Linkedin from "../../img/social/linkedin.svg";
 import X from "../../img/social/x.svg";
 import D from "../../img/social/d.svg";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export const Hero = () => {
   return (
-    <section className={s.sectionHero}>
+    <motion.section
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className={s.sectionHero}
+    >
       {" "}
       <div className={s.hero_connection}>
         <ul className={s.hero_connection_phone_mail}>
@@ -96,6 +104,6 @@ export const Hero = () => {
           priority
         />
       </div>
-    </section>
+    </motion.section>
   );
 };

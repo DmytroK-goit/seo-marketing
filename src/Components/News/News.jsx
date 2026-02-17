@@ -1,9 +1,12 @@
+"use client";
+
 import s from "./News.module.scss";
 import Book from "../../img/news/book.png";
 import Mount from "../../img/news/mount.png";
 import Class from "../../img/news/class.png";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export const newsData = [
   {
@@ -27,7 +30,14 @@ export const newsData = [
 ];
 export const News = () => {
   return (
-    <div id="blog" className={s.news_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="blog"
+      className={s.news_sec}
+    >
       <div className={s.news_block}>
         <h2>News & Case Studies</h2>
         <p className={s.news_block_p}>
@@ -65,6 +75,6 @@ export const News = () => {
           See all posts
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

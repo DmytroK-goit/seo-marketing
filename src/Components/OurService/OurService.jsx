@@ -13,6 +13,7 @@ import Voice from "../../img/service/voice.png";
 import Img from "../../img/service/img.png";
 import Done from "../../img/service/done.png";
 import FrameUnd from "../../img/frame_und.png";
+import { motion } from "framer-motion";
 export const OurService = () => {
   const services = [
     {
@@ -74,7 +75,13 @@ export const OurService = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div id="services">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="services"
+    >
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.service_sec}>
         <h2>Our Services</h2>
@@ -123,6 +130,6 @@ export const OurService = () => {
           <Image src={Img} alt="Img" width={580} height={480} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -7,6 +7,7 @@ import FrameUp from "../../img/frame_up.png";
 import Popular from "../../img/price/popular.png";
 import { useState } from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 export const Price = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
 
@@ -64,7 +65,14 @@ export const Price = () => {
   ];
 
   return (
-    <div id="price" className={s.price_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="price"
+      className={s.price_sec}
+    >
       <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.price_block}>
         <h2>Pricing & Plans</h2>
@@ -125,6 +133,6 @@ export const Price = () => {
           Pay your plan
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -8,7 +8,7 @@ import Tools from "../../img/fidback/tools.png";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -35,7 +35,13 @@ export const FidBack = () => {
   ];
 
   return (
-    <div className={s.feedback_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className={s.feedback_sec}
+    >
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
 
       <div className={s.feedback_block}>
@@ -80,6 +86,6 @@ export const FidBack = () => {
         height={150}
       />
       <Image src={FrameUpSec} alt="SEO marketing illustration" priority />
-    </div>
+    </motion.div>
   );
 };

@@ -7,6 +7,7 @@ import PhoneBook from "../../img/form/phonebook.png";
 import Email from "../../img/form/email.png";
 import Man from "../../img/form/man.png";
 import { Field, Formik, Form } from "formik";
+import { motion } from "framer-motion";
 export const FormSec = () => {
   const handleSubmit = async (values, { resetForm }) => {
     try {
@@ -30,7 +31,14 @@ export const FormSec = () => {
     }
   };
   return (
-    <div id="contact" className={s.form_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="contact"
+      className={s.form_sec}
+    >
       <Image src={FrameUndSec} alt="SEO marketing illustration" priority />
       <ul className={s.form_sec_list}>
         <li>
@@ -104,6 +112,6 @@ export const FormSec = () => {
           </Formik>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

@@ -23,3 +23,38 @@ ul {
 ul {
   list-style: none;
 }
+button {
+  transition: 0.25s;
+  cursor: pointer;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(108, 92, 231, 0.25);
+}
+a:not(.news_block_btn) {
+  position: relative;
+  color: #2c1258;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+a:not(.news_block_btn)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #5cdd2d, #00c2ff);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+a:not(.news_block_btn):hover {
+  color: #5cdd2d;
+}
+
+a:not(.news_block_btn):hover::after {
+  width: 100%;
+}

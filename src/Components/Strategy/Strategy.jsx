@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import FrameUnd from "../../img/frame_und.png";
 import FrameUp from "../../img/frame_up.png";
@@ -9,9 +10,17 @@ import SeoAgency from "../../img/strategy/seo_agency.png";
 import Done from "../../img/strategy/done.png";
 import Cloud from "../../img/strategy/Cloud.png";
 import People from "../../img/strategy/People.png";
+import { motion } from "framer-motion";
 export const Strategy = () => {
   return (
-    <div id="whySEO" className={s.strategy_section}>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="whySEO"
+      className={s.strategy_section}
+    >
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.strategy_first_block}>
         <div className={s.strategy_first_block_main}>
@@ -128,6 +137,6 @@ export const Strategy = () => {
         </div>
       </div>
       {/* <Image src={FrameUp} alt="SEO marketing illustration" priority /> */}
-    </div>
+    </motion.div>
   );
 };

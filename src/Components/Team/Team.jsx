@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import s from "./Team.module.css";
 import Kent from "../../img/team/kent.png";
@@ -8,6 +10,7 @@ import Jones from "../../img/team/jones.png";
 import Evans from "../../img/team/evans.png";
 import FrameUnd from "../../img/frame_und.png";
 import FrameUp from "../../img/frame_up.png";
+import { motion } from "framer-motion";
 export const Team = () => {
   const team = [
     {
@@ -42,7 +45,13 @@ export const Team = () => {
     },
   ];
   return (
-    <div id="team">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      id="team"
+    >
       <Image src={FrameUnd} alt="SEO marketing illustration" priority />
       <div className={s.team_sec}>
         <h2>Marketing Team</h2>
@@ -60,6 +69,6 @@ export const Team = () => {
         </ul>
       </div>
       {/* <Image src={FrameUp} alt="SEO marketing illustration" priority /> */}
-    </div>
+    </motion.div>
   );
 };

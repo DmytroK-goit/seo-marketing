@@ -1,14 +1,21 @@
+"use client";
 import s from "./Conversion.module.css";
-
 import FrameUp from "../../img/frame_up.png";
 import Image from "next/image";
 import Ok from "../../img/Conversation/Ok.png";
 import Sort from "../../img/Conversation/Sort.png";
 import Task from "../../img/Conversation/task.png";
 import Web from "../../img/Conversation/web.png";
+import { motion } from "framer-motion";
 export const Conversion = () => {
   return (
-    <div className={s.conversion_sec}>
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      className={s.conversion_sec}
+    >
       <Image src={FrameUp} alt="SEO marketing illustration" priority />
       <div className={s.conversion_block}>
         <div className={s.conversion_block_first_ch}>
@@ -55,6 +62,6 @@ export const Conversion = () => {
           </li>
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };

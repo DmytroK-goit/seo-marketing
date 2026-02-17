@@ -53,6 +53,7 @@
   color: #604b83;
 }
 .news_block_btn {
+  all: unset;
   margin-top: 60px;
   margin-bottom: 140px;
   border: 2px solid #2c1258;
@@ -69,4 +70,9 @@
   color: #2c1258;
   background-color: inherit;
   cursor: pointer;
+  transition: 0.25s;
+}
+.news_block_btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(108, 92, 231, 0.25);
 }
