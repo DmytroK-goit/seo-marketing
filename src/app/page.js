@@ -12,7 +12,24 @@ import { FidBack } from "@/Components/FidBack/FidBack";
 import { News } from "@/Components/News/News";
 import { GetTouch } from "@/Components/GetTouch/GetTouch";
 import { FormSec } from "@/Components/Form/FormSec";
-import { Footer } from "@/Components/Footer/Footer";
+
+export const metadata = {
+  title: "SEO & Marketing Agency | Spyro",
+  description:
+    "Professional SEO and digital marketing services to grow your business. Increase traffic, rankings and conversions with our expert team.",
+
+  keywords: [
+    "SEO services",
+    "digital marketing",
+    "SEO agency",
+    "Google ranking",
+    "marketing services",
+  ],
+
+  icons: {
+    icon: "/favicon.ico",
+  },
+};
 
 export default function Home() {
   return (
